@@ -4,9 +4,16 @@ let arr=Array.from(document.getElementsByTagName("a"))
 const{host, hostname, href, origin, pathname, port, protocol, search}=window.location
 
 //console.log(hostname)
-
+let strobj=(val)=>{
+	return new String(val);
+}
 let cmp=(s)=>{
-	return s.includes(hname)||s.includes(new 	String("youtube"))||s.includes(new 	String("t.me"))||s.includes(new 	String("chat.whatsapp"))||s.includes(new 	String("useblackbox"))||s.includes(new 	String("wordpress"))||s.includes(new 	String("linktr"));
+	return s.includes(hname)||s.includes(strobj("youtube"))
+		||s.includes(strobj("t.me"))||s.includes(strobj("whatsapp"))
+		||s.includes(strobj("useblackbox"))||s.includes(strobj("wordpress"))
+		||s.includes(strobj("linktr"))||s.includes(strobj("facebook"))
+		||s.includes(strobj("youtube"))||s.includes(strobj("instagram"))
+	        ||s.includes(strobj("twitter"))||s.includes(strobj("pinterest"));
 }
 
 let hname=new String(hostname)
